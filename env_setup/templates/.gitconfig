@@ -1,0 +1,24 @@
+# .gitconfig template
+
+[user]
+    # Your name and email are set by the script
+    name = 
+    email = 
+
+[alias]
+    # Add your preferred Git aliases here
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    lg = log --graph --decorate --pretty=oneline --abbrev-commit
+
+[core]
+    # Set global options, like editor
+    editor = vim
+
+[color]
+    # Enable colored output in Git
+    ui = auto
+
+# Add other configurations as needed
