@@ -1,0 +1,8 @@
+git:
+  user_name: ownEyes
+  user_email: 932048437@qq.com
+
+ssh:
+  algorithm: ed25519
+  key_size: 4096
+
