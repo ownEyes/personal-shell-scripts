@@ -25,7 +25,7 @@ else
     chmod +x "$INSTALL_SCRIPT"
 
     # Run the install script
-    ./"$INSTALL_SCRIPT"
+    ./"$INSTALL_SCRIPT" -b
 
     # Optionally, you can automatically initialize Conda by adding a line here:
     # rm "$INSTALL_SCRIPT"  # Clean up the installer script
@@ -36,7 +36,9 @@ else
     # Initialize Conda for all supported shells
     "$HOME/miniconda3/bin/conda" init
     
-    eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
+    # eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 
     echo "Miniconda installation and initialization completed."
+    source ~/.bashrc
+    conda info
 fi

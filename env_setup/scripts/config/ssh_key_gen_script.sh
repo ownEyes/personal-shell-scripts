@@ -7,14 +7,15 @@
 read -p "Enter your passphrase for the SSH key: " passphrase
 
 # Read configuration from the YAML file
-email=$(yq e '.email' "$config_file")
-algorithm=$(yq e '.ssh.algorithm' "$config_file")
-key_size=$(yq e '.ssh.key_size' "$config_file")
+email=$(sudo yq e '.ssh.email' "$config_file")
+algorithm=$(sudo yq e '.ssh.algorithm' "$config_file")
+
 
 # Generate the SSH key
 if [ "$algorithm" = "ed25519" ]; then
     ssh-keygen -t $algorithm -C "$email" -N "$passphrase"
 else
+    key_size=$(sudo yq e '.ssh.key_size' "$config_file")
     ssh-keygen -t $algorithm -b $key_size -C "$email" -N "$passphrase"
 fi
 

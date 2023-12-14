@@ -28,7 +28,7 @@ do
         conda)
             echo "Configuring Conda..."
             # Call a Conda configuration script here (if you have one)
-            # "${current_dir}/scripts/config/conda_config.sh"
+            "${current_dir}/scripts/Installation/conda_install.sh"
             ;;
         *)
             echo "Unknown argument: $arg"

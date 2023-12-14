@@ -22,7 +22,7 @@ else
     echo "No SSH keys found. Generating a new SSH key..."
 
     # Call SSH key generation script
-    "${current_dir}/config/ssh_key_gen_script.sh"
+    "${current_dir}/scripts/config/ssh_key_gen_script.sh"
 fi
 
 # Check if .gitconfig exists in the user's home directory
@@ -40,8 +40,8 @@ else
     # Copy the Git config template to the user's home directory
     cp "${current_dir}/templates/.gitconfig" ~/
 
-    git_user_name=$(yq e '.git_user_name' "$config_file")
-    git_user_email=$(yq e '.git_user_email' "$config_file")
+    git_user_name=$(sudo yq e '.git.user_name' "$config_file")
+    git_user_email=$(sudo yq e '.git.user_email' "$config_file")
 
     # Set global user name and email using the provided input
     git config --global user.name "$git_user_name"
