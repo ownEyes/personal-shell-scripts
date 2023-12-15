@@ -29,5 +29,7 @@ else
     ssh-add ~/.ssh/id_rsa
 fi
 
-
 echo "SSH key generated and added to ssh-agent."
+
+echo "Copy the SSH public key to your clipboard:"
+cat ~/.ssh/id_ed25519.pub
