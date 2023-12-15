@@ -31,5 +31,5 @@ fi
 
 echo "SSH key generated and added to ssh-agent."
 
-echo "Copy the SSH public key to your clipboard:"
-cat ~/.ssh/id_ed25519.pub
+echo -e "\e[1;33mCopy the SSH public key to your clipboard:\e[0m"
+cat ~/.ssh/id_ed25519.pub | GREP_COLOR='01;32' grep --color=always .
