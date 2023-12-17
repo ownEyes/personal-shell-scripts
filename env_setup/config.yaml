@@ -6,3 +6,16 @@ ssh:
   algorithm: ed25519
   key_size: 4096
 
+ros:
+  distribution: "noetic"  
+  dependencies:
+    - "ros-noetic-desktop-full"  
+    - "python3-rosdep"
+    - "python3-rosinstall"
+    - "python3-rosinstall-generator"
+    - "python3-wstool"
+    - "build-essential"       
+
+nerdFont:
+  font_name: "CascadiaCode"
+  github_repo: "ryanoasis/nerd-fonts"

@@ -39,6 +39,5 @@ else
     # eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 
     echo "Miniconda installation and initialization completed."
-    source ~/.bashrc
-    conda info
+
 fi

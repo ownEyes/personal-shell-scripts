@@ -30,6 +30,16 @@ do
             # Call a Conda configuration script here (if you have one)
             "${current_dir}/scripts/Installation/conda_install.sh"
             ;;
+        ros)
+            echo "Configuring ROS..."
+            # Call a Conda configuration script here (if you have one)
+            "${current_dir}/scripts/Installation/ros_install.sh"
+            ;;
+        nerdFont)
+            echo "Configuring nerd font..."
+            # Call a Conda configuration script here (if you have one)
+            "${current_dir}/scripts/Installation/nerdFont_install.sh"
+            ;;
         *)
             echo "Unknown argument: $arg"
             ;;
